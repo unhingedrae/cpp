@@ -1,0 +1,23 @@
+#include <iostream>
+  'iostream' is a header file that contains definitions + functions for input/output stream objects, such as std::cout and std::endl. 
+   by writing 'include' we are telling the compiler to include the contents of the 'iostream' header file in our program, which allows us to use the input/output stream objects and functions defined in that header. 
+
+int main() {
+...
+}
+  'int' means integer
+   begin the program by invoking the main function, and read the program between the curly braces ({...})
+
+std::cout << "I like pizza!" << std::endl  
+ 'std' means standard with the following 2 colons (::)
+ 'cout' (c-out) 'c' means character, and 'out' means output, altogether means 'standard character output'
+ '<<' these characters means output (also known as left shift operator, when used with numbers) 
+  whatever between ("...") quotation these two is a string
+  in the end of statements, we add semicolon (;), that let's the compiler know that this statement is completed
+  'endl' means 'end line' (can also add '\n')
+
+//...//
+  this is a comment, its used for your notes or for your another developer (can also use /*...*/ for multi-line comments)
+
+return 0;
+  when we add 'return 0;' that means there were no problems in this program, if 1 is written that means there was a problem or an issue
