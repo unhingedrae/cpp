@@ -1,0 +1,3 @@
+variable is a representation of some number or value. there are two steps of creating and using variable declaration and assignment.
+declaration is to declare a variable we need to list the data type of what we're storing exactly.
+in programming, you can store more than just numbers, you can store characters, even whole sentences.
