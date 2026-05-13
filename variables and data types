@@ -25,3 +25,40 @@ int x;
 
 int x = 5;
   it's known as assignment. we can also declare and assign in one line like this: int x = 10 
+
+//integer (whole number)
+  int age = 21; 
+  int years = 2026;
+  int days = 365;
+
+std::cout << "my age is " << age << std::endl;
+std::cout << "it is " << years << std::endl;
+std::cout << "there are " << days << " days in a year";
+
+//double (decimal number)
+double price = 10.99;
+double gpa = 9.5;
+double temp = 21.9;
+
+std::cout << "price is = " << price << std::endl;
+std::cout << "gpa is = " << gpa << std::endl;
+std::cout << "temp is = " << temp;
+
+//char (single character)
+char grades = 'C';
+char gender = 'F';
+char symbol = '@';
+
+std::cout << grades << std::endl;
+std::cout << gender << std::endl;
+std::cout << symbol;
+
+//chars can only store single character, not even 'AB'. there won't be second letter involved that is letter 'B'
+
+//boolean (true or false)
+bool light = true; //light switch can either be on or off, you could say that a light is on by saying true, and off by saying false
+
+//string (objects that represents a sequence of texts)
+std::string name = "goblin";
+
+std::cout << name;
