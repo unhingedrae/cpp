@@ -1,4 +1,16 @@
 #include <iostream>
+
+int main() {
+
+ std::cout << "I like pizza!" << std::endl;
+ std::cout << "its really amazing!";
+
+return 0;
+}
+
+
+
+#include <iostream>
   'iostream' is a header file that contains definitions + functions for input/output stream objects, such as std::cout and std::endl. 
    by writing 'include' we are telling the compiler to include the contents of the 'iostream' header file in our program, which allows us to use the input/output stream objects and functions defined in that header. 
 
