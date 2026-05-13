@@ -1,3 +1,27 @@
 variable is a representation of some number or value. there are two steps of creating and using variable declaration and assignment.
 declaration is to declare a variable we need to list the data type of what we're storing exactly.
 in programming, you can store more than just numbers, you can store characters, even whole sentences.
+
+
+#include <iostream>
+
+int main () {
+
+ int x = 5;
+ int y = 15;
+ int sum = x + y; 
+
+ std::cout << x << '\n';
+ std::cout << x << '\n';
+ std::cout << x << '\n';
+
+return 0;
+}
+
+
+int x; 
+  its a declaration
+  since we declared 'x' as an integer, we can only assign integer values to it. 
+
+int x = 5;
+  it's known as assignment. we can also declare and assign in one line like this: int x = 10 
