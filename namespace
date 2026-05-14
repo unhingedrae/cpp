@@ -1,0 +1,69 @@
+#include <iostream> 
+
+namespace first {
+	int x = 1;
+}
+namespace second {
+	int x = 2;
+}
+
+int main() {
+
+	//namespace = provides a solution for preventing name conflicts in large projects.
+	//each entity needs a unique name. a namespace allows for identically named entities as long as the namespace are different.
+
+	int x = 0; 
+
+	std::cout << x << std::endl; //the result will be 0
+	std::cout << first::x << std::endl; //the result will be 1, cause we mentioned the namespace 
+	std::cout << second::x; //the two semicolons are known as the scope resolution operator, it allows us to specify which namespace we want to use. the result will be 2.
+
+	//suppose we have a variable x = 0, each variable needs a unique name, i cannot create another variable with the same name and give different value.
+	//if i run that program with the same variable and dofferent value, i will run into an error.
+	//so each entity needs unique name, but if we use namespaces, then 2 or more can share the same name.
+	//to create a namespace, let's do outside of the main fucntion.
+
+	return 0;
+}
+
+//one line we've seen is using 'using namespace' then the name of the namespace,
+// if we have some entity without a prefix of the namespace, its assumed that we're using the entity found within that particular namespace 
+
+/*int main() {
+      using namespace first;
+	  
+	  std::cout << x; //the result will be 1, cause we mentioned the namespace first, so it will look for x within the first namespace, and it will find it and display it.
+	  std::cout << second::x; //the result will be 2, cause we mentioned the namespace second, so it will look for x within the second namespace, and it will find it and display it.
+	  
+	  return 0;
+	  
+}*/
+
+//if i want to display x while we're using the naamespace first, then x would be 1, and i dont need to add prefix,
+//but if i need x found within the second namespace, i would still need to prefix it with second
+
+//theres this evil line called 'using namespace std;' now the reason why people include this line is to save a lil bit of typing 
+
+/*int main() {
+	  using namespace std;
+
+	  string name = "meow";
+	
+	  cout << "Hello " << name; 
+
+	if we are using namespace std, we dont need to include that prefix when we declare strings or we display output with cout
+	it will still compile and run, however the standard namespace has hundereds of different entities
+
+	one alternative is by writing 
+	'using std::cout;' that will cut down some of the repetitions 
+
+	using std::cout;
+	using std::string;
+
+	string name = meow;
+
+	cout << "hello " << name
+	
+	  return 0;
+	
+}*/
