@@ -1,1 +1,44 @@
+#include <iostream> 
 
+int main() {
+  const double PI = 3.14159; 
+	double radius = 10;
+	double circumference = 2 * PI * radius;
+
+  const double GRAVITY = 9.81;
+	const double SPEED_OF_LIGHT = 299792458; // in meters per second
+	const double PLANCK_CONSTANT = 6.62607015e-34; // in joule-seconds
+	const double AVOGADRO_NUMBER = 6.02214076e23; // in particles per mole
+	const double WIDTH = 1920; // in pixels
+	const double HEIGHT = 1080; // in pixels
+
+  std::cout << "the circumference of a circle is " << circumference << "cm";
+
+  return 0;
+}
+
+
+
+the const keyword specifies that a variable's value is constant.
+tells the compiler to prevent any accidental changes to that variable's value.
+(read-only variable)
+
+if someone tries to change the value of pi, the compiler will generate an error, preventing any unintended modifications to the constant variable.
+for example,
+
+	double pi = 3.14159;
+	pi = 720.99;
+	double radius = 10;
+	double circumference = 2 * pi * radius;
+
+
+this will result in different output.
+
+to prevent this, we declare pi as a constant variable using the const keyword as a prefix.
+
+"const double pi = 3.14159;"
+
+
+
+	return 0;
+}
