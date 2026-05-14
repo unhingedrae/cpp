@@ -37,8 +37,3 @@ this will result in different output.
 to prevent this, we declare pi as a constant variable using the const keyword as a prefix.
 
 "const double pi = 3.14159;"
-
-
-
-	return 0;
-}
