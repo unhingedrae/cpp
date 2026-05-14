@@ -1,0 +1,33 @@
+#include <iostream> 
+#include <vector> 
+
+//typedef std::vector<std::pair<std::string, int>> pairlist_t //std::vector<std::pair<std::string, int>> this is a long data type, and we dont wanna write that whole thing so use typedef and add a new identifier or new name for that data type in the end of the data type, dont forget to add '_t" after the alias. (the new identifier usually ends with underscore t for typedef)
+//typedef std::string text_t;
+//typedef int number_t;
+using text_t = std::string; //using keyword is a more modern way to create type aliases, introduced in C++11. It serves the same purpose as typedef but has a clearer syntax, especially when dealing with templates.
+using number_t = int;
+
+int main() {
+
+	//std::vector<std::pair<std::string, int>> pairlist; //instead of writing all that stuff write the new identifier
+	//pairlist_t pairlist;
+
+	/*typedef = reserved keyword used to create an additional name(alias)
+	(alias) for another data type. New identifier for an existing type. 
+	Helps with readability and reduces typos.*/ 
+	//kind of a nickname. 
+	/*one of the reasons people use typedef is that it helps with readability
+	and reduces typos.*/ //for example: 
+	//use when there is a clear benefit, replaced with 'using' keyword in C++11 and later.
+
+	text_t firstName = "uneducated peanut";
+	number_t age = 21;
+
+	std::cout << firstName << '\n';
+	std::cout << age << '\n';
+
+	return 0;
+}
+
+/*typedef has largely been replaced with 'using' keyword, that's because the 'using' keyword
+works better with templates.*/
