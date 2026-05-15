@@ -1,0 +1,42 @@
+#include <iostream> 
+
+int main() {
+
+	/*these arithmetic operators have an order of precedence, we resolve any 
+	* arithmetic operations that are first in parentheses then multiplication and 
+	* division, then lastly addition and subtraction . We can use parentheses to change the order of precedence.*/
+
+	/*arithmetic operators = return the result of a specific calculation or
+	artithmatic operations (+ - * /)*/
+
+	int students = 2 * (6 - 5 + 4 * 3 / 2); //first parentheses, then multiplication and division, then addition and subtraction
+	//double students = 20; //using double to get the result of division with decimal points
+
+	//addition
+	//students = students + 1; //or
+	//students+= 1; //or
+	//students++; //++ means 1
+
+	//subtraction
+	//students -= 2; //or
+	//students -= 2; //or
+	//students--; //the result will be 19 cause the --/++ means 1
+
+	//multiplication
+	//students = students * 2; //or
+	//students *= 2; 
+
+	//division
+	//students = students / 2; //or
+	//students /= 3;
+
+	//int remainder = students % 3; //modulo operator, it gives the remainder of the division
+
+	/*using the modulo operator to check if a number is even or odd, take some value
+	or variable you want to check and divide it by 2, if the remainder is 0 then it's even, if the remainder is 1 then it's odd*/
+
+	//std::cout << remainder;
+	std::cout << students;
+
+	return 0;
+}
