@@ -25,3 +25,18 @@ int main() {
 
 	return 0;
 }
+
+//std::cout << (char) 100; //what if we cast 100 as a character, it will convert the '100' into its corresponding ASCII character which is 'd'
+
+/*hows this useful ? suppose we have an online exam, we have to give user the score, so how many questions
+did they get right divided by how many questions were total (correct / number of questions)*/ 
+
+int correct = 8;
+int questions = 10; 
+double score = correct / (double) questions * 100; //when it was 'correct/questions*100' the result was "0" instead of 80 cause, we used 
+                                                   // integer division, questions is of the 'int' data type when we're dividing 8 by 10, 
+                                                  //we're truncating that decimal portion we're gettingrid of it then multiplying whatever remains by 100.
+												  //so we have to explicitly cast the 'questions' variable as a 'double', so that we can get the decimal portion of the division, then multiply it by 100 to get the percentage score.
+	
+
+std::cout << score << "%";
