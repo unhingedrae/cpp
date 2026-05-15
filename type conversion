@@ -1,0 +1,25 @@
+#include <iostream> 
+
+int main() {
+
+	int x = 3.24; //since integer can only hold whole numbers, 
+
+	std::cout << x; //well the value be 3 (decimal is truncated/removed), we implicitly converted the number into integer
+
+	double x = 3.24;
+
+	std::cout << x; //it retains the decimal
+
+	double x = (int) 3.24;  //what if we cast 3.24 as an integer then assigned it to a double variable
+		                     //before the value add set of parentheses and the new data type
+	                      //this will convert the '3.24' into 'integer', then store it within this 'double x' 
+	                     //and now the x is 3, its a whole integer
+	std::cout << x;
+
+	return 0;
+}
+
+
+	type conversions = conversion a value of one	data type to another 
+	implicit = automatic 
+	explicit = precede value with new data type (int)
