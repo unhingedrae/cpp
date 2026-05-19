@@ -1,3 +1,5 @@
+code 1
+
 #include <iostream> 
 #include <string>
 
@@ -23,6 +25,44 @@ int main() {
 	cout << "whats your age?: ";
 	cin >> age;
 	cout << "oh my god! you are " << age << " years old!" << endl;
+
+	return 0;
+}
+
+
+code 2
+
+#include <iostream> 
+#include <string>
+
+//cout << console output (insertion operator)
+//cin >> console input (extraction operator)
+
+int main() {
+
+	using namespace std;
+
+	string name; //to add a space in the name, we can use getline(cin, name) instead of cin >> name
+	string text;
+	int age;
+
+	cout << "whats your age?: "; //here's the issue if we accept some user input with cin followed by getline, the getline will be skipped because of the newline character left in the input buffer by cin. To fix this, we can use cin.ignore() to ignore the newline character before using getline.
+	                             //heres the issue of we accept some user input with cin followed by getline, well in our input buffer, theres a newline character and we dont pick up that newline character, when we reach the getline function it accepts the newline character thats still within the buffer 
+	                             //so to prevent that from happening theres one change that we can make to the getline function after cin add this "std::cin >> std::ws" for any white spaces, this portion will eliminate any newline character or any white spaces before any user input 
+	cin >> age;
+
+	cout << "whats your name?: ";
+	std::getline(std::cin >> std::ws, name); //this will ignore any white spaces before the user input and it will also ignore the newline character left in the input buffer by cin)
+	//std::getline(std::cin, name); //if you need to accept a string that includes white spaces, you'ree better off using getline() instead of the >> operator, which stops reading input at the first whitespace character it encounters.
+
+	cout << "hey " << name << "! how was your day?" << endl;
+	std::getline(std::cin,text);
+
+	cout << "oh, good to hear!" << '\n';
+
+	cout << "whats your age again?: ";
+	cin >> age;
+	cout << "oh my god! you are " << age << " years old! you look too young!" << endl;
 
 	return 0;
 }
