@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath> //cmath is a library that contains mathematical functions
+
+int main() {
+
+	using namespace std;
+
+	double x = 3.99;
+	double y = 4;
+	double z; 
+
+	//z = max(x, y); //max is a function that displays the maximum of two numbers
+	//z = min(x, y); //min is a function that displays the minimum of two numbers
+	//z = pow(x, y); //pow is a function that displays the value of x raised to the power of y
+	//z = sqrt(x); //sqrt is a function that displays the square root of a number
+	//z = abs(-95); //abs (absolute value) is a function that displays the positive value of a number and how far it is from zero
+	//z = round(x); //round is a function that rounds a number to the nearest integer
+	//z = ceil(x); //ceil is a function that rounds a number up to the nearest integer
+	z = floor(x); //floor is a function that rounds a number down to the nearest integer
+
+	cout << z;
+
+	return 0;
+}
