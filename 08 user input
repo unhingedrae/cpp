@@ -1,0 +1,28 @@
+#include <iostream> 
+#include <string>
+
+//cout << console output (insertion operator)
+//cin >> console input (extraction operator)
+
+int main() {
+
+	using namespace std;
+
+	string name; //to add a space in the name, we can use getline(cin, name) instead of cin >> name
+	string text;
+	int age;
+
+	cout << "whats your name?: ";
+	std::getline(std::cin, name); 
+
+	cout << "hey " << name << "! how was your day?" << endl;
+	std::getline(std::cin,text);
+
+	cout << "oh, good to hear!" << '\n';
+
+	cout << "whats your age?: ";
+	cin >> age;
+	cout << "oh my god! you are " << age << " years old!" << endl;
+
+	return 0;
+}
