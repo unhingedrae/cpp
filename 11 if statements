@@ -1,0 +1,41 @@
+#include<iostream>
+
+int main() 
+{
+	using namespace std;
+	//if statements = do something if a condition is true.
+	//                if not, then dont do it.
+
+	int age; 
+
+	cout << "enter your age: ";
+	cin >> age;
+
+	if (age >= 50) { //if some conditions within the parentheses is true, you perform subset of code
+		             //greater than or equals to is a comparison operator, also includes less than or equals to, if you need to compare two values are eqaul, you use two equal signs
+		             //equals sign is assignment operator
+
+		cout << "you too old for this site!"; //i wrote 12 as my age, so the code didnt do anything, since the condition appeared to be false, we skipped the code,
+		                                //if it was true then we execute it.
+
+	}
+	else if (age >= 18) {
+
+		cout << "welcome to the site!";
+
+	}
+	else if (age <= 0) {
+
+		cout << "you aint even born!";
+
+	}
+	else { //if you would rather do something else if a condition is false, you can use an "else" statement, its placed in the end of the "if" statement.
+		
+		cout << "sorry kid, you too young!";
+
+	}
+
+	//the order of the "if", "else" and "else if" statements matter and makes difference
+
+	return 0;
+}
