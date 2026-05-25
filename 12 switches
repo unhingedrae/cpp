@@ -1,0 +1,94 @@
+#include<iostream>
+
+int main() 
+{
+	using namespace std;
+
+	//switches = alternative for using many "else if" statements
+	//           compare one value against matching cases. 
+
+	int month;
+	cout << "enter month between 1 to 12: ";
+	cin >> month; 
+
+	switch (month) {
+	case 1:
+		cout << "its january";
+		break;
+	case 2:
+		cout << "its february";
+		break;
+	case 3:
+		cout << "its march";
+		break;
+	case 4:
+		cout << "its april";
+		break;
+	case 5:
+		cout << "its may";
+		break;
+	case 6:
+		cout << "its june";
+		break;
+	case 7:
+		cout << "its july";
+		break;
+	case 8:
+		cout << "its august";
+		break;
+	case 9:
+		cout << "its september";
+		break;
+	case 10:
+		cout << "its october";
+		break;
+	case 11:
+		cout << "its november";
+		break;
+	case 12:
+		cout << "its december";
+		break;
+	default:
+		cout << "type between 1 to 12! i told you right?";
+	}
+
+	return 0;
+}
+
+
+#code 2
+#include<iostream>
+
+int main() 
+{
+	using namespace std;
+
+	//switches = alternative for using many "else if" statements
+	//           compare one value against matching cases. 
+
+	char grade;
+	cout << "enter your grade between A to F: ";
+	cin >> grade; 
+
+	switch (grade) {
+	case 'A':
+		cout << "you did awesome!";
+		break;
+	case 'B':
+		cout << "you did good!";
+		break;
+	case 'C':
+		cout << "you did okayish!";
+		break;
+	case 'D':
+		cout << "you did well! but can be good next time!";
+		break;
+	case 'F':
+		cout << "better luck next time! try harder!";
+		break;
+	default:
+		cout << "type in your grade between A to F! i told you right?";
+	}
+
+	return 0;
+}
