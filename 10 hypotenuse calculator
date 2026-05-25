@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath> //cmath is a library that contains mathematical functions
+
+int main() {
+
+	using namespace std;
+
+	//this is going to be practice project to calculate the hypotenuse of a right triangle using the c = sqrt(a^2 + b^2) formula
+
+	double a;
+	double b;
+	double c;
+
+	cout << "enter side A: ";
+	cin >> a;
+
+	cout << "enter side B: ";
+	cin >> b;
+
+	a = pow(a, 2); //pow is a function that takes two arguments and returns the first argument raised to the power of the second argument)
+	b = pow(b, 2);
+	c = sqrt(a + b); //sqrt is a function that takes one argument and returns the square root of that argument)
+
+	//or you can simply write "c = sqrt(pow(a, 2) + pow(b, 2));" without using the "a = pow(a, 2);" and "b = pow(b, 2);" lines
+
+	cout << "side C is: " << c << endl;
+
+	return 0;
+}
