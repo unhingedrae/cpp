@@ -1,0 +1,37 @@
+#include<iostream>
+
+int main() 
+{
+	using namespace std;
+
+	/* && = check if two conditions are true
+	* || = check if one of the two conditions is true
+	* ! = reverse the logical state of its operand
+	*/
+
+	/*int temp;
+	cout << "Enter the temperature in Celsius: ";
+	cin >> temp;
+
+	temp > 0 && temp < 30 ? cout << "The weather is good." : cout << "The weather is bad.";*/
+
+	/*int temp;
+	bool sunny = true;
+
+	cout << "Enter the temperature in Celsius: ";
+	cin >> temp;
+
+	temp <= 0 || temp >= 30 ? cout << "The weather is bad.\n" : cout << "The weather is good.\n";
+	sunny ? cout << "The weather is sunny.\n" : cout << "The weather is cloudy.\n";*/
+
+	/*int temp;
+	bool sunny = false;
+
+	cout << "Enter the temperature in Celsius: ";
+	cin >> temp;
+
+	temp <= 0 || temp >= 30 ? cout << "The weather is bad.\n" : cout << "The weather is good.\n";
+	!sunny ? cout << "The weather is cloudy.\n" : cout << "The weather is sunny.\n";*/
+
+	return 0;
+}
