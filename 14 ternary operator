@@ -1,0 +1,22 @@
+#include<iostream>
+
+int main() 
+{
+	using namespace std;
+
+	//ternary operator ?: = replacement for if-else statement
+	// condition ? expression1 : expression2
+
+	//int grade = 50;
+
+	//grade >= 60 ? cout << "you passed" : cout << "you failed";
+
+	//int number = 10;
+	//number % 2 == 1 ? cout << "odd" : cout << "even"; // modulus operator (%) returns the remainder of an integer division between two operands.
+
+	//bool hungry = true;
+	//hungry ? cout << "I'm hungry" : cout << "I'm full";
+	//cout << (hungry ? "I'm hungry" : "I'm full") << endl;
+
+	return 0;
+}
