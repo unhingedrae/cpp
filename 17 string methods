@@ -1,0 +1,42 @@
+#include<iostream>
+#include<string>
+
+int main() 
+{
+	using namespace std;
+
+	string name;
+
+	cout << "enter your name: ";
+	getline(cin, name);
+
+	/*if (name.length() > 12) {
+			cout << "your name is too big";
+	}
+	else {
+		cout << "welcome " << name << endl;
+	}*/
+
+	/*name.empty() ? cout << "your name is empty" : cout << "welcome " << name << endl;*/
+
+	/*name.clear();
+
+	cout << "welcome " << name << endl;*/
+
+	/*name.append("@gamil.com");
+
+	cout << "your new username is " << name << endl;*/
+
+	/*cout << name.at(1) << endl;*/
+
+	/*name.insert(0, "@");
+	cout << name;*/
+
+	/*cout << name.find(" ");*/
+
+	/*cout << name.erase(0, 8) << endl;
+	cout << name;*/
+
+
+	return 0;
+}
