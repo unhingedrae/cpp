@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+
+int main() 
+{
+	using namespace std;
+
+	// for loop = its a loop that will execute a block of code a certain number of times
+
+	/*for (int i = 1; i <= 10; i++) { //first part is index a sort of counter [index = i (people shorten it to i)] //second part is a stopping condition //third statement is that we can increment or decrement our counter, our index 
+		cout << i << endl;
+	}
+	cout << "lizard\n";*/
+
+	/*for (int i = 1; i <= 10; i-=3) {
+		cout << i << endl;
+	}
+	cout << "lizard\n";*/
+
+	/*for (int i = 10; i >= 0; i-) {
+		cout << i << endl;
+	}
+	cout << "lizard\n";*/ //this can be a countdown timer
+
+	return 0;
+}
