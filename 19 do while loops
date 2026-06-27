@@ -1,0 +1,53 @@
+#include<iostream>
+#include<string>
+
+int main() 
+{
+	using namespace std;
+
+	// do while loop = do some block of code first,
+	//                 THEN repeat again if condition is true
+
+	/*int number;
+	
+	while (number < 0) {
+		cout << "enter a positive number: ";
+		cin >> number;
+	}
+
+	cout << "number is: " << number;*/
+
+	//this isn't going to work normally, here's why, we have declared our number but have not assigned a value yet, 
+	//when reach the while loop, we check the condition. if the condition is true, we execute the code block, since we've declared
+	//an integer variable but have not assigned its defaulting to just zero. Zero is not less than zero, so the condition is false and we skip the while loop
+
+	/*int number; //its not best solution, yet we learning, so we can use a do while loop instead, which will execute the code block first, then check the condition
+
+	cout << "enter a positive number: ";
+	cin >> number;
+
+	while (number < 0) {
+		cout << "enter a positive number: ";
+		cin >> number;
+	}
+	cout << "number is: " << number;*/
+
+	//if number is still less than zero, we would execute the block of code repeatedly until the condition is false, which means the user has entered a positive number
+	//so we cant actually continue until the user has entered a positive number, which is what we want to do
+
+	int number; 
+
+	do{ //"do" this code once and then check the condition
+		cout << "enter a positive number: ";
+		cin >> number;
+	} while (number < 0);
+
+	cout << "number is: " << number;
+
+	//you do some block of code first then you repeat it again if the condition is true, its an optional way to repeat.
+	//good use of a "do while loop" that comes to mind is maybe we're playing a game, we would like to run a game once
+	//at the end of the game and the user can choose to play again, if they choose to play again, we would repeat the game, if they choose not to play again, we would exit the game
+	//totally based on the user input, we would repeat the game or exit the game, so we would use a do while loop in that case
+
+	return 0;
+}
