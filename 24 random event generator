@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+#include<ctime> // for time()
+
+//this event generator is useful if you're writing a game, where you want to random event to occur like 
+//random monsters to occur, or random items to be found, or random events to happen, or weather changes
+
+int main() 
+{
+	using namespace std;
+
+	srand(time(0)); // seed random number generator
+	int randNum = rand() % 5 + 1; 
+
+	switch (randNum) {
+	case 1: cout << "hey! you won a sticker!" << endl;
+		break;
+	case 2: cout << "hey! you won a t-shirt!" << endl;
+		break;
+	case 3: cout << "hey! you won a lunch!" << endl;
+		break;
+	case 4: cout << "hey! you won a silver ring!" << endl;
+		break;
+	case 5: cout << "hey! you won a gold ring!" << endl;
+		break;
+	}
+
+	return 0;
+}
