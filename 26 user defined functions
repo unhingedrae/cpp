@@ -1,0 +1,101 @@
+/*#include<iostream>
+#include<string>
+#include<ctime> 
+
+using namespace std;
+
+void singOjosTristes() {//use a unique function name, the function name should be descriptive of what the function does
+
+	cout << "No, it's not hard to see\n";
+	cout << "That you probably feel worse than me\n";
+	cout << "It's not your fault I have to leave\n";
+	cout << "Please don't you look that way, baby\n\n"; //to invoke this function, you will need to call it in the main function
+	cout << "Those sad eyes, sad eyes\n";
+	cout << "You know I don't wanna say goodbye\n";
+	cout << "Don't cry, don't cry\n";
+	cout << "Just hold me for one last time\n\n";
+} 
+int main() 
+{
+	using namespace std;
+
+	string name = "This is for you\n";
+
+	//function = a block of resusable code 
+
+	//if you think that you gonna use a block of code more than once, you should put it in a function
+	//will make a function to sing ojos tristes
+
+	cout << name << endl;
+	singOjosTristes(); //call the function to sing ojos tristes
+	singOjosTristes(); //we can call the function multiple times to sing the song multiple times
+	singOjosTristes();
+	singOjosTristes();
+
+	/*sometimes people will declare a function and define their function after the main function, 
+	because its more readable,but the issue "singOjosTristes was not declared in this scope" will be
+	shown, because our program are read from the top to down, since we are invoking the singOjosTristes
+	before we even know what it is, the compiler doesn't recognize it. the solution to this is that 
+	before the main function you can declare functions but define them later*/
+
+	/* void singOjosTristes();
+	
+	int main()
+	{ 
+
+	using namespace std;
+	
+	singOjosTristes();
+	
+	return 0;
+	}*/
+
+	/*return 0;
+	}*/
+
+//what if we have a variable standard string 
+
+#include<iostream>
+#include<string>
+#include<ctime> 
+
+	using namespace std;
+
+	void singOjosTristes(string name, int age); 
+
+	int main()
+	{
+		using namespace std;
+
+		string name = "Ojos Tristes by Selena Gomez, The Marias and Benny Blanco\n"; //will use this variable thats declared in the main function to print out the name of the song
+		int age = 41;
+
+		singOjosTristes(name, age); 
+
+		return 0;
+	}
+	void singOjosTristes(string name, int age) {
+
+		cout << name << endl; //this will not work because the variable name is declared in the main function, so it is not accessible in the singOjosTristes function, to fix this we can pass the variable name as a parameter to the function
+		cout << "No, it's not hard to see\n";
+		cout << "That you probably feel worse than me\n";
+		cout << "It's not your fault I have to leave\n";
+		cout << "Please don't you look that way, baby\n\n"; 
+		cout << "Those sad eyes, sad eyes\n";
+		cout << "You know I don't wanna say goodbye\n";
+		cout << "Don't cry, don't cry\n";
+		cout << "Just hold me for one last time\n\n";
+		cout << "For a man who is " << age << " years old and still a baby to me\n"; 
+	}
+
+	//think of each function as a house, the main function is your house, functions outside of the main function will be your neighbors house,
+	//their house functions cant see your whats going on inside your house, and your house functions cant see whats going on inside their house
+	//in order for the song function to use the main function's name variable it needs to made aware of it, to do that, when 
+	//you invoke a neighboring function you can pass that variable or some other value as an argument, so within the parenthesis, when you invoke the function
+	//place your values or variables. when you send the data over to a function that data is also known as argument, however receiving the function needs a matching
+	//set of what we are called as parameter. if this function is going to receive a data, this name you need a matching parameter to set up a parameter, you first
+	//list the data type, we will receive a string, then we will give it a name, we can call it name, but it can be called anything, but it is best to use the same name as the argument
+
+	//functions are not aware of whats goin on inside of other functions but you can make them aware of any local variable or vaalues by passing them as argument, but you will need a matching
+	//set of parameters, the name or otherwise unique identifier of the parameter doesnt necessarily need to have the same name, so to say you can name it something else
+	//instead of naming parameter name 
