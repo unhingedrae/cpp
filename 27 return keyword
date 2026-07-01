@@ -1,0 +1,37 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+
+/*void*/double square(double length);
+double cube(double length);
+
+int main() 
+{
+
+	using namespace std;
+
+	double length = 5.0;
+	double area = square(length); 
+	double volume = cube(length);
+
+	cout << "area of a square is: " << area << "cm^2\n"; 
+	cout << "volume of a cube is: " << volume << "cm^3\n";
+
+	//return = return value back to the spot where you called the encompassing function 
+
+	return 0;
+}
+/*void*/double square(double length) {
+
+	return length * length;
+}
+double cube(double length) {
+
+	return length * length * length;
+}
+
+	//if we're returning a value, we need to change the keyword "void" to the match the data type of what we're returning,
+	//as we are returning a double, we need to change the keyword "void" to "double"
+
+
+
