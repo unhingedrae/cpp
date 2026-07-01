@@ -33,5 +33,35 @@ double cube(double length) {
 	//if we're returning a value, we need to change the keyword "void" to the match the data type of what we're returning,
 	//as we are returning a double, we need to change the keyword "void" to "double"
 
+example 2:
+
+#include<iostream>
+#include<string>
+#include<ctime> 
+
+using namespace std;
+
+string concatStrings(string string1, string string2);
+
+int main() 
+{
+
+	using namespace std;
+
+	string Firstname = "uneducated";
+	string Lastname = "goblin";
+	string Fullname = concatStrings(Firstname, Lastname);
+
+	cout << "hey " << Fullname << "!\n";
+
+	return 0;
+}
+string concatStrings(string string1, string string2) {
+	return string1 + " " + string2;
+}
+
+
+
+
 
 
