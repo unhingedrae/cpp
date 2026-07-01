@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+
+int main() 
+{
+	using namespace std;
+
+	int num; //the number will be randomly generated 
+	int guess; //this varible will hold the current player's guess
+	int tries = 0; //how many tries the user is it going to take
+
+	srand(time(NULL)); //seed the random number generator
+	num = rand() % 100 + 1; //generate a random number between 1 and 100
+
+	cout << "guess the correct number!" << endl;
+
+	do {
+		cout << "enter your guess between 1 and 100!: \n";
+		cin >> guess; //get the user's guess
+		tries++; //increment the number of tries
+
+			if(guess > num){
+				cout << "baby it's too high! try again!" << endl;
+
+			}
+			else if (guess < num) {
+				cout << "baby it's too low! try again!" << endl;
+			}
+			else {
+				cout << "congratulations! you guessed the correct number in " << tries << " tries!" << endl;
+			}
+	} while (guess != num); 
+
+	return 0;
+}
