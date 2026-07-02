@@ -23,8 +23,8 @@ int main()
 
 		cin >> choice;
 
-		cin.clear(); //cin.clear clears the error flag on cin so that future I/O operations will work correctly
-		fflush(stdin); //fflush(stdin) clears the input buffer so that any leftover input does not affect future I/O operations
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 		switch (choice) {
 		case 1:
