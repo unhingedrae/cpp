@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+
+using namespace std;
+
+int myNum = 3; // global variable
+
+void printNum();
+
+int main() 
+{
+	int myNum = 2; // local variable
+	printNum();
+	cout << ::myNum << '\n';
+
+
+	//local variables = declared inside a function or block {}
+	//global variables = declared outside of all functions and blocks {}
+
+	return 0;
+}
+void printNum() {
+	int myNum = 1; // local variable
+	cout << ::myNum << '\n';
+}
+
+
+//its best to avoid global variable if you can, cause it pollutes the global namespace and
+//also variables declared within a function are much more secure cause functions can only access
+//variables declared within their own scope, and not variables declared in other functions.
+//if we had both a local variable and a global variable with the same name,
+//"myNum" within the main function will be one within the "printNum" it will be two.
+//if i had to display myNum for both of these, will add a new line.
+// a function will use any local variable first, before resorting to any global vaariable
+//thats why our prints "2" and the main function prints "1", if you'd rather use the global
+//version you can use the scope resolution operator (::) so it would be cout << ::myNum << '\n'; 
+//and that would print "3" instead of "2" or "1"
+//the place of	using the local version of myNum we will use global version.
+//we are using the global version of myNum	instead of the local version 
