@@ -1,0 +1,37 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+
+using namespace std;
+
+void bakepizza();
+void bakepizza(string topping1);
+void bakepizza(string topping1, string topping2);
+
+int main() 
+{
+
+	using namespace std;
+
+	bakepizza("pepporoni", "olive");
+
+	return 0;
+}
+
+void bakepizza()
+{
+	cout << "baking pizza...\n";
+}
+void bakepizza(string topping1)
+{
+	cout << "baking pizza with " << topping1;
+}
+void bakepizza(string topping1, string topping2) 
+{
+	cout << "baking pizza with " << topping1 << " and " << topping2;
+}
+
+//it is valid to share the same name but you need to have different parameters. This is called function overloading.
+//a function's name + its parameters is called as function signature. 
+
+
