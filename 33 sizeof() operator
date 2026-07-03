@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+
+int main() {
+
+    using namespace std;
+
+	// sizeof() = determines the size in bytes of a:
+	// variable, data type, class, objects, etc.
+	//its like how much memory it stores
+
+	/*double gpa = 9.8;
+	string name = "meow";
+	bool mute = true;
+	char students[] = {'a', 'b', 'c', 'd'};
+
+	cout << sizeof(students) << " bytes\n";*/
+
+	double gpa = 9.8;
+	string name = "meow";
+	bool mute = true;
+	char students[] = { 'a', 'b', 'c', 'd', 'e'};
+	string cats[] = { "cat1", "cat2", "cat3", "cat4" };
+
+	cout << sizeof(cats)/sizeof(string) << " elements\n"; 
+
+	//remember that char take up 1 byte of memory, so an array of 5 will use 5 bytes
+	//we can use the size of operator to calculate how many elements are within an array, 
+	//if we have total size of our array, we could divide it by the size of one element, such as
+	//cout << sizeof(students)/sizeof(char) << " elements\n"; or 
+	//cout << sizeof(students)/sizeof(stduents[0]) << " elements\n"; 
+
+	return 0;
+}
