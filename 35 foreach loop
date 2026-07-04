@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+
+int main() {
+
+    using namespace std;
+
+	//foreach loop = loop that eases the traversal over an iterable data set
+
+	string students[] = {"meow1", "meow2", "meow3"};
+
+	/*for (int i = 0; i < sizeof(students) / sizeof(string); i++) { //int i = 0 is index
+		cout << students[i] << '\n';                             //i < sizeof(students) / sizeof(string) is condition
+		                                                          //i++ is increment (i-- is decrement)
+
+	}*/
+	//the above code works but theres another way writing this using a foreach loop,
+	//theres less syntax than a typical for loop but is less flexible,
+	//using for loop, we can go forward, backward or even skip iterations of something
+	//we are iterating over using a foreach loop, we start at the beginning and go to the 
+	//end, theres less flexibility
+
+	for (string students : students) {
+		cout << students << '\n';
+	}
+
+	int numbers[] = { 1, 2, 3, 4, 5 };
+
+	for (int numbers : numbers) {
+		cout << numbers << '\n';
+	}
+
+	return 0;
+}
