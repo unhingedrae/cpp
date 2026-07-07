@@ -1,0 +1,70 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+
+
+int main() {
+
+	using namespace std;
+
+	//multidimensional arrays are nothing but an array made up of separate arrays
+	// they're useful because they can represent grid or matrix of data with rows and columns
+	//something like 2d array = {array1, array 2, array3,...};
+	//two [][] brackets mean one for rows and second for columns
+	//string cars[3][4] = this will give you 12 elements...well for now theres no need to 
+	//add the number of rows
+	//
+
+	string cars[][4] = { { "mustang", "porsche", "bmw", "mercedes" },
+					   { "tata", "mahindra", "ferrari", "alfa romeo" },
+					   { "red bull racing", "cadillac", "suburu", "aston martin" } };
+
+	cout << cars[0][0] << '\n';
+	cout << cars[0][1] << '\n';
+	cout << cars[0][2] << '\n';
+	cout << cars[0][3] << '\n';
+
+	return 0;
+}
+
+example 2:
+
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+
+
+int main() {
+
+	using namespace std;
+
+	//multidimensional arrays are nothing but an array made up of separate arrays
+	// they're useful because they can represent grid or matrix of data with rows and columns
+	//something like 2d array = {array1, array 2, array3,...};
+	//two [][] brackets mean one for rows and second for columns
+	//string cars[3][4] = this will give you 12 elements...well for now theres no need to 
+	//add the number of rows
+	//
+
+	string cars[][4] = { { "mustang", "porsche", "bmw", "mercedes" },
+					   { "tata", "mahindra", "ferrari", "alfa romeo" },
+					   { "red bull racing", "cadillac", "suburu", "aston martin" } };
+
+	int rows = sizeof(cars) / sizeof(string);
+	int columns = sizeof(cars[0]) / sizeof(cars[0][0]);
+
+	/*for (int i = 0; i < rows; i++) {
+		cout << cars[i] << '\n'; //this gives memory addresses
+	}*/
+
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < columns; j++) {
+			cout << cars[i][j] << " ";
+		}
+		cout << '\n'; 
+	}
+
+	return 0;
+}
