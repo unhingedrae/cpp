@@ -1,0 +1,80 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+
+
+int main() {
+
+	using namespace std;
+
+	//fill() = fills a range of elements with a specified value
+	//         fill(begin, end, value)
+
+	string foods[100]; //= { "burger", "cola", "fanta", "pasta", "fries", "celery", "vegemite", "lasgna", "ribs", "pork" };
+
+	fill(foods, foods + 100, "burger");
+
+
+	for (string food : foods) {
+		cout << food << '\n';
+	}
+
+	return 0;
+}
+
+
+example 2
+
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+
+
+int main() {
+
+	using namespace std;
+
+	const int size = 100;
+	string foods[size]; 
+
+	fill(foods, foods + (size/2), "burger");
+	fill(foods + (size / 2), foods + size, "cola");
+
+
+	for (string food : foods) {
+		cout << food << '\n';
+	}
+
+	return 0;
+}
+
+
+example 3
+
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+
+
+int main() {
+
+	using namespace std;
+
+	const int size = 99;
+	string foods[size]; 
+
+	fill(foods, foods + (size/3), "burger");
+	fill(foods + (size / 3), foods + (size/3)*2, "cola");
+	fill(foods + (size / 3)*2, foods + size, "hotdog");
+
+
+	for (string food : foods) {
+		cout << food << '\n';
+	}
+
+	return 0;
+}
+
