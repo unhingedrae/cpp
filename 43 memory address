@@ -1,0 +1,39 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+#include<cctype>
+
+using namespace std;
+
+int main() {
+
+	// memory addresses = a location in memory where the data is stored 
+	// a memory address can be accessed with & (address-of operator)
+
+	string name = "uneducated goblin";
+	int age = 21;
+	bool student = true;
+
+	//a variable is a container for some data, but these variables need to be stored or exist somewhere,
+	//well they exist in your computer's memory at a given address, we can find that address with the 
+	//address of operator.
+
+	cout << &name << '\n'; //this gives a bunch of weird letters and numbers, known as hexadecimal address
+	cout << &age << '\n'; //every time you run the program, it will likely change the address
+	cout << &student << '\n';
+
+	//we can convert the hexadecimal to decimal and find out the address.
+	
+	//413406328456 - string name
+	//413406328516 - int age
+	//413406328548 - bool student
+	
+	//different data types takes more or less room than other data types,
+	//if we look at the distance between my name variable and age, theres a gap of 60 memory addresses (456 - 516),
+	//but the gap between my age and student variable is 32 memory addresses (booleans only takes up to one byte of memory)
+	//we use data types cause we need to know how much memory we need to allocate to fit a certain value, if we're
+	//working with a boolean value we mostly need one byte of memory, integers takes up to four bytes of memory
+
+	return 0;
+}
