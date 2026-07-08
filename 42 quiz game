@@ -1,0 +1,61 @@
+#include<iostream>
+#include<string>
+#include<ctime> 
+#include<iomanip>
+#include<cctype>
+
+using namespace std;
+
+int main() {
+
+	string questions[] = { "1. Who is Arctic Monkey's Lead Singer? : ",
+						  "2. What role Matt Helders holds in the band? : ",
+						  "3. What's the most famous song in Arctic Monkey's album AM have? : ",
+						  "4. What's the recent album of Arctic Monkey released? : " };
+
+	string options[][4] = {{ "A. Alex Turner", "B. Matt Helders", "C. Jamie Cook", "D. Nick O'Malley" },
+	                      { "A. Lead Singer", "B. Lead Guitarist", "C. Lead Drummer", "D. Lead Bass Player" },
+	                      { "A. Arabella", "B. One For The Road", "C. Fireside", "D. Do I Wanna Know" },
+						  { "A. AM", "B. The Car", "C. Humbug", "D. Favourite Worst Nightmare" }};
+
+	char answerKey[] = { 'A', 'C', 'D', 'B' };
+
+	int size = sizeof(questions) / sizeof(questions[0]);
+	char guess;
+	int score = 0;
+
+	for (int i = 0; i < size; i++) {
+		cout << "**********************\n";
+		cout << questions[i] << '\n';
+		cout << "**********************\n";
+
+		for (int j = 0; j < sizeof(options[i])/sizeof(options[i][0]); j++) {
+			cout << options[i][j] << '\n';
+			cout << '\n';
+
+		}
+
+		cin >> guess;
+		guess = toupper(guess);
+
+		if (guess == answerKey[i]) {
+			cout << "BINGO!\n";
+			score++;
+		}
+		else {
+			cout << "NO!!!!\n";
+			cout << "Answer: " << answerKey[i] << '\n';
+		}
+	}
+
+	cout << "***********************\n";
+	cout << "*     SCOREBOARD!     *\n";
+	cout << "***********************\n";
+
+	cout << "CORRECT Guesses!: " << score << '\n';
+	cout << "# of Questions: " << size << '\n';
+
+	cout << "SCORE! : " << (score /(double)size) * 100 << "%";
+
+	return 0;
+}
